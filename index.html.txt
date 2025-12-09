@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>EcoCart – Sustainable Shopping</title>
+  <link rel="stylesheet" href="style.css" />
+
+  <!-- Better, readable Google Font -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+</head>
+
+<body>
+  <!-- Header -->
+  <header>
+    <h1 class="logo">EcoCart 🌱</h1>
+    <nav>
+      <a href="#about">About</a>
+      <a href="#products">Products</a>
+      <a href="#contact">Contact</a>
+      <button class="cart-btn" onclick="toggleCart()">🛒 Cart (<span id="cart-count">0</span>)</button>
+    </nav>
+  </header>
+
+  <!-- Cart Panel -->
+  <div id="cart-panel" class="cart-panel">
+    <h2>Your Cart</h2>
+    <div id="cart-items"></div>
+    <button class="close-cart" onclick="toggleCart()">Close</button>
+  </div>
+
+  <!-- Hero Banner -->
+  <section class="hero">
+    <h2>Shop Sustainably. Live Responsibly.</h2>
+    <p>Eco-friendly products that help you reduce waste and protect our planet.</p>
+    <button class="cta" onclick="scrollToProducts()">Browse Products</button>
+  </section>
+
+  <!-- About Section -->
+  <section id="about" class="about">
+    <h2>Why EcoCart?</h2>
+    <p>
+      We connect environmentally conscious shoppers with sustainable, ethically sourced products.
+      Our mission is to make eco-friendly living accessible, stylish, and affordable.
+    </p>
+  </section>
+
+  <!-- Product Grid -->
+  <section id="products" class="products">
+    <h2>Featured Eco Products</h2>
+
+    <div class="product-grid">
+
+      <!-- Product 1 -->
+      <div class="product-card">
+        <img src="https://images.unsplash.com/photo-1606813902911-e1637a81e7d2?auto=format&fit=crop&w=600&q=60" alt="Reusable Water Bottle">
+        <h3>Reusable Bamboo Water Bottle</h3>
+        <p>Eliminate plastic waste with a durable, eco-friendly bottle.</p>
+        <button onclick="addToCart('Reusable Bamboo Water Bottle')">Add to Cart</button>
+      </div>
+
+      <!-- Product 2 -->
+      <div class="product-card">
+        <img src="https://images.unsplash.com/photo-1601924569622-df2f9f5e173d?auto=format&fit=crop&w=600&q=60" alt="Reusable Tote Bag">
+        <h3>Organic Cotton Tote Bag</h3>
+        <p>Perfect for groceries, books, and everyday errands.</p>
+        <button onclick="addToCart('Organic Cotton Tote Bag')">Add to Cart</button>
+      </div>
+
+      <!-- Product 3 -->
+      <div class="product-card">
+        <img src="https://images.unsplash.com/photo-1596464716127-f2a82984a44d?auto=format&fit=crop&w=600&q=60" alt="Wooden utensils">
+        <h3>Biodegradable Kitchen Utensils</h3>
+        <p>Sustainable replacements for plastic disposable utensils.</p>
+        <button onclick="addToCart('Biodegradable Kitchen Utensils')">Add to Cart</button>
+      </div>
+
+      <!-- Product 4 -->
+      <div class="product-card">
+        <img src="https://images.unsplash.com/photo-1612157777902-3897f4751ef1?auto=format&fit=crop&w=600&q=60" alt="Eco-friendly skincare">
+        <h3>Eco-Friendly Skincare Set</h3>
+        <p>All-natural skincare packaged in reusable jars.</p>
+        <button onclick="addToCart('Eco-Friendly Skincare Set')">Add to Cart</button>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Contact Section -->
+  <section id="contact" class="contact">
+    <h2>Contact Us</h2>
+    <p>Email: support@ecocart.com</p>
+    <p>Instagram: @EcoCartOfficial</p>
+  </section>
+
+  <footer>
+    <p>© 2025 EcoCart — Sustainable Living Starts Here 🌎</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,45 @@
+// Smooth scroll to product section
+function scrollToProducts() {
+  document.getElementById("products").scrollIntoView({
+    behavior: "smooth"
+  });
+}
+
+let cart = [];
+
+// Add item to cart
+function addToCart(productName) {
+  cart.push(productName);
+  updateCart();
+}
+
+// Update cart UI
+function updateCart() {
+  document.getElementById("cart-count").innerText = cart.length;
+
+  let cartItemsDiv = document.getElementById("cart-items");
+  cartItemsDiv.innerHTML = "";
+
+  cart.forEach((item, index) => {
+    const row = document.createElement("div");
+    row.classList.add("cart-item-row");
+
+    row.innerHTML = `
+      <p>${item}</p>
+      <button onclick="removeItem(${index})">Remove</button>
+    `;
+
+    cartItemsDiv.appendChild(row);
+  });
+}
+
+// Remove single item
+function removeItem(index) {
+  cart.splice(index, 1);
+  updateCart();
+}
+
+// Open/close cart panel
+function toggleCart() {
+  document.getElementById("cart-panel").classList.toggle("open");
+}
